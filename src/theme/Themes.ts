@@ -2,7 +2,7 @@ import colors from './colors';
 
 export const lightTheme = {
     body: colors.white,
-    text: colors.grayDark,
+    text: colors.white,
     toggleBorder: colors.white,
     background: colors.grayDark,
 };
