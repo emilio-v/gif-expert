@@ -1,7 +1,7 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 
-import GlobalStyle from './theme/GlobalStyle';
+import GlobalStyles from './theme/GlobalStyles';
 import { lightTheme, darkTheme } from './theme/Themes';
 import { useThemeToggler } from './hooks/useThemeToggler';
 
@@ -17,7 +17,7 @@ const App: React.FC<AppProps> = () => {
     return (
         <ThemeProvider theme={themeMode}>
             <>
-                <GlobalStyle />
+                <GlobalStyles />
                 <Toggle theme={theme} toggleTheme={themeToggler} />
             </>
         </ThemeProvider>
