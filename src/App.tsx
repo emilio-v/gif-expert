@@ -10,9 +10,11 @@ import Toggle from './theme/Toggle';
 interface AppProps {}
 
 const App: React.FC<AppProps> = () => {
-    const [theme, themeToggler] = useThemeToggler();
+    const [theme, themeToggler, mountedComponent] = useThemeToggler();
 
     const themeMode = theme === 'light' ? lightTheme : darkTheme;
+
+    if (!mountedComponent) return <div />;
 
     return (
         <ThemeProvider theme={themeMode}>

@@ -16,6 +16,11 @@ const GlobalStyles = createGlobalStyle`
         font-family: Tahoma, Helvetica, Arial, Roboto, sans-serif;
         transition: all 0.50s linear;
     };
+    button {
+        margin: 0;
+        padding: 0;
+        border: none
+    }
 `;
 
 export default GlobalStyles;
