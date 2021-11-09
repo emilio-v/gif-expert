@@ -11,8 +11,8 @@ interface ToggleProps {
 }
 
 const Button = styled.button`
-    background: ${({ theme }) => theme.background};
-    color: ${({ theme }) => theme.text};
+    background: ${({ theme }) => theme.iconBackground};
+    color: ${({ theme }) => theme.iconColor};
     border-radius: 50%;
     cursor: pointer;
     padding: 8px;

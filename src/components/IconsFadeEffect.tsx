@@ -25,7 +25,7 @@ const StyledIconn = styled.div<StyledIconProp>`
     left: 0;
     margin: auto;
     z-index: ${props => (props.active ? 1 : 0)};
-    transition: opacity 300ms ease-in-out; ;
+    transition: all 300ms ease-in-out; ;
 `;
 
 const IconsFadeEffect: React.FC<IconsFadeEffectProps> = ({

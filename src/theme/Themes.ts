@@ -1,15 +1,15 @@
 import colors from './colors';
 
 export const lightTheme = {
-    body: colors.white,
-    text: colors.white,
-    toggleBorder: colors.white,
-    background: colors.grayDark,
+    background: colors.white,
+    text: colors.black,
+    iconColor: colors.white,
+    iconBackground: colors.grayishBlue,
 };
 
 export const darkTheme = {
-    body: colors.grayDark,
-    text: colors.daisy,
-    toggleBorder: colors.steel,
-    background: colors.gray,
+    background: colors.dark,
+    text: colors.white,
+    iconColor: colors.white,
+    iconBackground: colors.grayishBlue,
 };
