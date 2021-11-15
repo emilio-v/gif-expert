@@ -6,6 +6,7 @@ import { lightTheme, darkTheme } from './theme/Themes';
 import { useThemeToggler } from './hooks/useThemeToggler';
 
 import Toggle from './theme/Toggle';
+import GifExpert from './components/GifExpert';
 
 interface AppProps {}
 
@@ -20,6 +21,7 @@ const App: React.FC<AppProps> = () => {
         <ThemeProvider theme={themeMode}>
             <>
                 <GlobalStyles />
+                <GifExpert />
                 <Toggle theme={theme} toggleTheme={themeToggler} />
             </>
         </ThemeProvider>

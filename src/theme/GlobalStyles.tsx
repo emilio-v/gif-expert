@@ -16,12 +16,15 @@ const GlobalStyles = createGlobalStyle`
         font-family: Tahoma, Helvetica, Arial, Roboto, sans-serif;
         transition: all 0.50s linear;
         margin: 0;
-        padding: 0;
+        padding: 30px;
     };
     button {
         margin: 0;
         padding: 0;
         border: none
+    };
+    hr {
+        background: ${({ theme }: GlobalThemeProps) => theme.text};
     }
 `;
 
