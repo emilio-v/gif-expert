@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
 import AddCategory from './AddCategory';
+import GifGrid from './GifGrid';
 
 const GifExpert: React.FC = () => {
-    const initialCategories = ['One punch', 'Dragon Ball', 'Cats'];
+    const initialCategories = ['Cats'];
 
     const [categories, setCategories] = useState<string[]>(initialCategories);
 
-    console.log(categories);
     return (
         <>
             <h1>Gif Expert App</h1>
-            <hr />
             <AddCategory setCategories={setCategories} />
+            <hr />
             <ol>
-                {categories.map((category, idx) => (
-                    <li key={`${category}-${idx}`}>{category}</li>
-                ))}
+                {categories.map((category, idx) => {
+                    return <GifGrid key={`${category}-${idx}`} category={category} />;
+                })}
             </ol>
         </>
     );
