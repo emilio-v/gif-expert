@@ -25,6 +25,10 @@ const GlobalStyles = createGlobalStyle`
     };
     hr {
         background: ${({ theme }: GlobalThemeProps) => theme.text};
+    };
+    ol {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 `;
 
