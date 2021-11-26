@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import colors from '../utils/colors';
-import { capitalize } from '../utils/capitalize/capitalize';
+import colors from '../theme/colors';
+import { capitalize } from '../helpers/capitalize';
 
 interface GifGridItemProps {
     id: string;

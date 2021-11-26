@@ -1,4 +1,4 @@
-import colors from '../utils/colors';
+import colors from './colors';
 
 export const lightTheme = {
     background: colors.white,

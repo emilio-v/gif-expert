@@ -15,7 +15,7 @@ const AddCategory: React.FC<AddCategoryProps> = ({ setCategories }) => {
         e.preventDefault();
 
         if (newCategory.trim().length > 2) {
-            setCategories(categories => [...categories, newCategory]);
+            setCategories(categories => [newCategory, ...categories]);
             setNewCategory('');
         }
     };

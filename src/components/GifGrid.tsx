@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import GifGridItem from './GifGridItem';
+import getGifs from '../helpers/getGifs';
 
 interface GifGridProps {
     category: string;
@@ -22,25 +23,8 @@ const GifGrid: React.FC<GifGridProps> = ({ category }) => {
     const [images, setImages] = useState<GifProps[]>([]);
 
     useEffect(() => {
-        getGifs();
-    }, []);
-
-    const getGifs = async () => {
-        const url =
-            'https://api.giphy.com/v1/gifs/search?q=Rick+and+Morty&limit=10&api_key=UjM3hWDYdlCy3GmLfh9PSj5bA3gadGis';
-        const resp = await fetch(url);
-        const { data } = await resp.json();
-
-        const gifs = data.map((gif: any) => {
-            return {
-                id: gif.id,
-                title: gif.title,
-                url: gif.images?.downsized_medium.url,
-            };
-        });
-
-        setImages(gifs);
-    };
+        getGifs(category).then(setImages);
+    }, [category]);
 
     return (
         <>

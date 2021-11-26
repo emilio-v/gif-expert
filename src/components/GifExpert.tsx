@@ -3,7 +3,7 @@ import AddCategory from './AddCategory';
 import GifGrid from './GifGrid';
 
 const GifExpert: React.FC = () => {
-    const initialCategories = ['Cats'];
+    const initialCategories = ['Rick and Morty'];
 
     const [categories, setCategories] = useState<string[]>(initialCategories);
 
