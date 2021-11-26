@@ -20,7 +20,7 @@ const GifGrid: React.FC<GifGridProps> = ({ category }) => {
 
     const getGifs = async () => {
         const url =
-            'http://api.giphy.com/v1/gifs/search?q=Rick+and+Morty&limit=10&api_key=UjM3hWDYdlCy3GmLfh9PSj5bA3gadGis';
+            'https://api.giphy.com/v1/gifs/search?q=Rick+and+Morty&limit=10&api_key=UjM3hWDYdlCy3GmLfh9PSj5bA3gadGis';
         const resp = await fetch(url);
         const { data } = await resp.json();
 
