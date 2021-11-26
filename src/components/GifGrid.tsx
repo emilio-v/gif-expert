@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import styled from 'styled-components';
 import GifGridItem from './GifGridItem';
 
 interface GifGridProps {
@@ -10,6 +11,12 @@ interface GifProps {
     title: string;
     url: string;
 }
+
+const CardGrid = styled.div`
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+`;
 
 const GifGrid: React.FC<GifGridProps> = ({ category }) => {
     const [images, setImages] = useState<GifProps[]>([]);
@@ -36,12 +43,14 @@ const GifGrid: React.FC<GifGridProps> = ({ category }) => {
     };
 
     return (
-        <div>
+        <>
             <h3>{category}</h3>
-            {images.map(img => (
-                <GifGridItem key={img.id} {...img} />
-            ))}
-        </div>
+            <CardGrid>
+                {images.map(img => (
+                    <GifGridItem key={img.id} {...img} />
+                ))}
+            </CardGrid>
+        </>
     );
 };
 
