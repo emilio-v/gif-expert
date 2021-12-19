@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import GifGridItem from './GifGridItem';
 import getGifs from '../helpers/getGifs';
+import { useFetchGifs } from '../hooks/useFetchGifs';
 
 interface GifGridProps {
     category: string;
@@ -20,17 +21,14 @@ const CardGrid = styled.div`
 `;
 
 const GifGrid: React.FC<GifGridProps> = ({ category }) => {
-    const [images, setImages] = useState<GifProps[]>([]);
-
-    useEffect(() => {
-        getGifs(category).then(setImages);
-    }, [category]);
+    const { data, loading } = useFetchGifs({ category });
 
     return (
         <>
             <h3>{category}</h3>
+            {loading && 'Loading...'}
             <CardGrid>
-                {images.map(img => (
+                {data.map(img => (
                     <GifGridItem key={img.id} {...img} />
                 ))}
             </CardGrid>
