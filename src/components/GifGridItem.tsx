@@ -28,7 +28,7 @@ const Title = styled.p`
 
 const GifGridItem: React.FC<GifGridItemProps> = ({ id, title, url }) => {
     return (
-        <Card>
+        <Card className="animate__animated animate__rubberBand">
             <Image src={url} alt={title} />
             <Title>{capitalize(title)}</Title>
         </Card>
