@@ -24,6 +24,8 @@ export const useFetchGifs = ({ category }: { category: string }): StateProps => 
             console.log(gifs);
             setState({ data: gifs, loading: false });
         });
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [category]);
 
     return state;
