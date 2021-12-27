@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GifGridItem> it should show GifGridItem 1`] = `
+<styled.div
+  className="animate__animated animate__rubberBand"
+>
+  <styled.img
+    alt="title"
+    src="http://gif-test.com"
+  />
+  <styled.p>
+    Title
+  </styled.p>
+</styled.div>
+`;
